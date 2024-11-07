@@ -1,8 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Importando o Link para navegação
+import React, { useEffect } from "react";
 import securityImage from "./staticLanding/ben-o-bro-wpU4veNGnHg-unsplash.jpg"; // Caminho da imagem local
 
 const LandingPage = () => {
+  useEffect(() => {
+    document.title = "SGS Security - Controle e Segurança";
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-700 font-sans">
       {/* Header */}
@@ -18,16 +21,12 @@ const LandingPage = () => {
 
           {/* Login buttons */}
           <div className="space-x-4">
-            
-              <button className="px-6 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition">
-                Login como Administrador
-              </button>
-           
-           
-              <button className="px-6 py-2 bg-green-500 text-white font-semibold rounded hover:bg-green-600 transition">
-                Login como Colaborador
-              </button>
-         
+            <button className="px-6 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition">
+              Login como Administrador
+            </button>
+            <button className="px-6 py-2 bg-green-500 text-white font-semibold rounded hover:bg-green-600 transition">
+              Login como Colaborador
+            </button>
           </div>
         </div>
       </header>

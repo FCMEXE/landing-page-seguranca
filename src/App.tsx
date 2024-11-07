@@ -1,7 +1,8 @@
 import React from "react";
-import securityImage from "./static/ben-o-bro-wpU4veNGnHg-unsplash.jpg"; // Caminho da imagem local
+import { Link } from "react-router-dom"; // Importando o Link para navegação
+import securityImage from "./staticLanding/ben-o-bro-wpU4veNGnHg-unsplash.jpg"; // Caminho da imagem local
 
-const App: React.FC = () => {
+const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-700 font-sans">
       {/* Header */}
@@ -14,6 +15,20 @@ const App: React.FC = () => {
             <a href="#benefits" className="hover:text-gray-500 transition">Benefícios</a>
             <a href="#contact" className="hover:text-gray-500 transition">Contato</a>
           </nav>
+
+          {/* Login buttons */}
+          <div className="space-x-4">
+            
+              <button className="px-6 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition">
+                Login como Administrador
+              </button>
+           
+           
+              <button className="px-6 py-2 bg-green-500 text-white font-semibold rounded hover:bg-green-600 transition">
+                Login como Colaborador
+              </button>
+         
+          </div>
         </div>
       </header>
 
@@ -96,4 +111,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default LandingPage;
